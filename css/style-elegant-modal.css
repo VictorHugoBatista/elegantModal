@@ -1,5 +1,5 @@
 /* Modal */
-.show {
+.btn-modal {
   padding: 13px 30px;
   background: white;
   color: #0B1847;
@@ -12,11 +12,13 @@
   transition: all 0.2s;
   text-align: center;
   width: 200px;
-  position: absolute;
-  top: 40%;
-  left: 40%;
+  position: relative;
+  top: 130px;
+  text-align: center;
+  margin: 0 auto;
 }
-.content-button {
+
+.content-button-close {
   padding: 13px 30px;
   background: white;
   color: #0B1847;
@@ -31,10 +33,13 @@
   width: 200px;
   margin: 60px auto 0 auto;
 }
-.show:hover, .content-button:hover {
+
+.btn-modal:hover,
+.content-button-close:hover {
   background: #0B1847;
   color: white;
 }
+
 .close {
   position: absolute;
   top: 15px;
@@ -51,6 +56,7 @@
   -moz-box-shadow: 0px 9px 15px -5px rgba(0, 0, 0, 0.46);
   box-shadow: 0px 9px 15px -5px rgba(0, 0, 0, 0.46);
 }
+
 .mask {
   position: fixed;
   top: 0;
@@ -63,6 +69,7 @@
   opacity: 0;
   transition: 0.7s;
 }
+
 .elegant-modal {
   position: fixed;
   top: 50%;
@@ -83,23 +90,28 @@
   -moz-box-shadow: 0px 9px 15px -5px rgba(0, 0, 0, 0.46);
   box-shadow: 0px 9px 15px -5px rgba(0, 0, 0, 0.46);
 }
-.active {
+
+.--active {
   visibility: visible;
   opacity: 1;
   transition: all .2s;
 }
-.active + .elegant-modal {
+
+.--active + .elegant-modal {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
 }
+
 .elegant-modal h1.title-modal {
   margin: 40px 0 20px 0;
   padding: 0 15px;
 }
+
 .elegant-modal hr.line-modal {
   border: 1px solid #F2F2F2;
 }
+
 .elegant-modal p.paragraph-modal {
   font-size: 18px;
   margin-top: 20px;
